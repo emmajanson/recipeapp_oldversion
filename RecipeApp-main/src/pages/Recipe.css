@@ -1,0 +1,65 @@
+.summaryWrapper {
+  display: flex;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-top: 5%;
+}
+
+.titleAndSummary {
+  width: 650px;
+  margin-left: 5%;
+}
+
+.title {
+  font-family: 'Playfair Display', serif;
+  font-size: 35px;
+  font-weight: 400;
+  padding-bottom: 5%;
+  text-align: center;
+}
+
+.summary {
+  font-size: 16px;
+  padding-bottom: 10px;
+}
+
+.detailsWrapper {
+  display: flex;
+  margin-top: 1%;
+  margin-bottom: 5%;
+  width: 500px;
+}
+
+button {
+  padding: 15px 35px;
+  font-size: 18px;
+  color: #313131;
+  background: #fff;
+  border: 2px solid #84B59F;
+  border-radius: 50px;
+  margin-bottom: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  transform: scale(0.8);
+}
+
+.active{
+  background-color: #84B59F;
+  color: #fff;
+}
+
+.info {
+  margin-left: 110px;
+}
+
+.ingredients {
+  font-size: 16px;
+  line-height: 40px;
+  margin-top: 20px;
+}
+
+.instructions {
+  font-size: 16px;
+  line-height: 20px;
+  margin-top: 20px;
+}

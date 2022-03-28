@@ -1,0 +1,23 @@
+.cuisineWrapper {
+  margin: 5%;
+}
+
+.cuisineGrid {
+  display: grid; 
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  grid-gap: 2rem;
+}
+
+.cuisineImage {
+  width: 100%;
+  border-radius: 1rem;
+}
+
+.cuisineItemTitle {
+  text-align: center;
+  padding: 1rem;
+}
+
+.cuisineLink {
+  text-decoration: none;
+}

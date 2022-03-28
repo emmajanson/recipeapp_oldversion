@@ -1,0 +1,24 @@
+.searchedWrapper {
+    margin: 5%;
+}
+
+.searchedGrid {
+  display: grid; 
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  grid-gap: 2rem;
+
+}
+
+.searchedImage {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.searchedItemTitle {
+  text-align: center;
+  padding: 1rem;
+}
+
+.searchedLink {
+ text-decoration: none;
+}
