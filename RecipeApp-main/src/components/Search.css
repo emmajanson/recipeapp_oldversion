@@ -1,13 +1,13 @@
 .searchformWrapper {
   display: flex;
   width: 100vw;
-  overflow: hidden;
 }
 
 .searchform {
   position: relative;
   margin-bottom: 20px;
   top: 30%;
+  left: 30%;
   width: 100%;
 }
 
