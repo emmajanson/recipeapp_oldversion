@@ -1,13 +1,12 @@
 .categorybar {
   display: flex;
   margin: 10px 45px;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
 }
 
 .link {
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
   border: 2px solid #84B59F;
   text-decoration: none;
   border-radius: 50px;
@@ -16,6 +15,13 @@
   margin-right: -15px;
   cursor: pointer;
   transform: scale(0.8);
+}
+
+@media screen and (max-width: 500px){
+  .categorybar {
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
 }
 
 .active {
