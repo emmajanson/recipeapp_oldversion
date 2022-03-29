@@ -30,7 +30,7 @@ function App() {
    })
 
    useEffect(() => {
-    console.log(mobileMode, windowLoad);
+    
 
    }, [mobileMode, windowLoad])
 
@@ -45,6 +45,7 @@ function App() {
         <Header />
         <Category />
         <Search />
+        
         <Pages mobileMode={mobileMode} windowLoad={windowLoad} />
       </BrowserRouter>
     </div>

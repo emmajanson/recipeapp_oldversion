@@ -29,7 +29,7 @@ function Popular({ isLoading, mobileMode, windowLoad }) {
         setPopular(data.recipes);
     }
     
-    setTimeout(() => setPopularIsLoading(false), 2000)
+    setTimeout(() => setPopularIsLoading(false), 2000);
   };
 
   return popularIsLoading ? (

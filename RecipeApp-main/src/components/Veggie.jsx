@@ -31,7 +31,7 @@ function Veggie({ mobileMode, windowLoad }) {
         setVeggie(data.recipes);
     }
 
-    setTimeout(() => setVeggieIsLoading(false), 2000)
+    setTimeout(() => setVeggieIsLoading(false), 2000);
   };
 
   return veggieIsLoading ? (

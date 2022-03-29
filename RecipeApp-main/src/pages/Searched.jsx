@@ -4,6 +4,7 @@ import {useParams} from "react-router-dom";
 import {Link} from "react-router-dom";
 import './Searched.css';
 import Loader from '../components/Loader';
+import NoResultPage from '../components/NoResultPage';
 
 function Searched() {
     const [searchedRecipes, setSearchedRecipes] = useState([]);
@@ -17,9 +18,7 @@ function Searched() {
         );
         const recipes = await data.json();
         setSearchedRecipes(recipes.results);
-
-        setTimeout(() => setSearchIsLoading(false), 2000)
-
+        setTimeout(() => setSearchIsLoading(false), 2000);
     };
 
     useEffect(() => {
@@ -28,9 +27,14 @@ function Searched() {
 
 
 
-  return searchIsLoading ? (
-    <Loader />
-  ) : (
+  return searchIsLoading ?  (
+    <Loader />):
+    searchedRecipes.length <= 0 ?
+    (
+        <NoResultPage />
+    ):
+
+  (
     <div className='searchedWrapper'>
     <div className='searchedGrid'>
       {searchedRecipes.map((item) => {
@@ -46,6 +50,7 @@ function Searched() {
     </div>
   </div>
   )
+   
 }
 
 export default Searched;
