@@ -16,7 +16,8 @@ function Searched() {
         );
         const recipes = await data.json();
         setSearchedRecipes(recipes.results);
-        setSearchIsLoading(false);
+
+        setTimeout(() => setSearchIsLoading(false), 2000)
     };
 
     useEffect(() => {
