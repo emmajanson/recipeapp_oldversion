@@ -8,6 +8,7 @@ import Loader from '../components/Loader';
 function Searched() {
     const [searchedRecipes, setSearchedRecipes] = useState([]);
     const [searchIsLoading, setSearchIsLoading] = useState(true);
+
     let params = useParams();
 
     const getSearched = async (name) => {
@@ -18,11 +19,14 @@ function Searched() {
         setSearchedRecipes(recipes.results);
 
         setTimeout(() => setSearchIsLoading(false), 2000)
+
     };
 
     useEffect(() => {
         getSearched(params.search);
     }, [params.search]);
+
+
 
   return searchIsLoading ? (
     <Loader />
