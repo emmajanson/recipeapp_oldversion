@@ -3,9 +3,9 @@
 }
 
 .searchedGrid {
-  display: grid; 
-  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
-  grid-gap: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
 
 }
 
@@ -21,4 +21,9 @@
 
 .searchedLink {
  text-decoration: none;
+}
+
+.searchedCard{
+  width: 40vw;
+  max-width: 15rem;
 }

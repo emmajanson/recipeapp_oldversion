@@ -14,8 +14,10 @@ const defaultOptions = {
 
 function Loader () {
   return (
-      <div className='loader'>
+      <div className='loader-wrapper'>
+        <div className='loader'>
         <Lottie options={defaultOptions} height={420} width={420} />
+        </div>
       </div>
   )
 }

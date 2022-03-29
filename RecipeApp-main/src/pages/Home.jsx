@@ -12,7 +12,7 @@ function Home({ isLoading, mobileMode, windowLoad }) {
           transition={{ duration: 0.5 }}
         >
             <Popular isLoading={isLoading} mobileMode={mobileMode} windowLoad={windowLoad} />
-            <Veggie isLoading={isLoading} />
+            <Veggie isLoading={isLoading} mobileMode={mobileMode} windowLoad={windowLoad} />
         </motion.div>
     );
 }

@@ -6,7 +6,7 @@ import {Link} from "react-router-dom";
 import './Veggie.css';
 import Loader from "./Loader";
 
-function Veggie() {
+function Veggie({ mobileMode, windowLoad }) {
 
   const [veggie, setVeggie] = useState([]);
   const [veggieIsLoading, setVeggieIsLoading] = useState(true);
@@ -42,7 +42,7 @@ function Veggie() {
         <h3 className="veggieTitle">Veggie Dishes</h3>
         <Splide 
           options={{
-            perPage: 4,
+            perPage: mobileMode || windowLoad ? 2 : 4,
             arrows: true,
             pagination: false,
             drag: "free",

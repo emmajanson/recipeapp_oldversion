@@ -1,6 +1,13 @@
-.loader {
-    display: flex;
+.loader-wrapper{
     position: absolute;
-    bottom: 20%;
-    left: 30%;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: flex-start;
+    align-items: center;
+}
+
+.loader {
+    position: relative;    
+    top: 0%;
 }
