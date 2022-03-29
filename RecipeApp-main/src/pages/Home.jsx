@@ -3,7 +3,7 @@ import Popular from "../components/Popular";
 import { motion } from "framer-motion";
 import React from "react";
 
-function Home() {
+function Home({ isLoading }) {
     return (
         <motion.div
           animate={{ opacity: 1 }}
@@ -11,8 +11,8 @@ function Home() {
           exit={{ opacity: 0 }}
           transition={{ duration: 0.5 }}
         >
-            <Popular />
-            <Veggie />
+            <Popular isLoading={isLoading} />
+            <Veggie isLoading={isLoading} />
         </motion.div>
     );
 }
