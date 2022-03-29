@@ -14,6 +14,7 @@ function App() {
         <Pages />
       </BrowserRouter>
     </div>
+    // Hej hej har skriver jag 
   );
 }
 
