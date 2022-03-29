@@ -4,10 +4,12 @@ import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/splide/dist/css/splide.min.css";
 import {Link} from "react-router-dom";
 import './Veggie.css';
+import Loader from "./Loader";
 
 function Veggie() {
 
   const [veggie, setVeggie] = useState([]);
+  const [veggieIsLoading, setVeggieIsLoading] = useState(true);
 
   useEffect(() => {
     getVeggie();
@@ -28,9 +30,13 @@ function Veggie() {
         localStorage.setItem("veggie", JSON.stringify(data.recipes));
         setVeggie(data.recipes);
     }
+
+    setTimeout(() => setVeggieIsLoading(false), 2000)
   };
 
-  return (
+  return veggieIsLoading ? (
+    <Loader />
+  ) : (
     <div>
       <div className="veggieWrapper">
         <h3 className="veggieTitle">Veggie Dishes</h3>

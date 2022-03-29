@@ -8,6 +8,7 @@ import Loader from "./Loader";
 
 function Popular({ isLoading }) {
   const [popular, setPopular] = useState([]);
+  const [popularIsLoading, setPopularIsLoading] = useState(true);
 
   useEffect(() => {
     getPopular();
@@ -27,9 +28,11 @@ function Popular({ isLoading }) {
         localStorage.setItem("popular", JSON.stringify(data.recipes));
         setPopular(data.recipes);
     }
+    
+    setTimeout(() => setPopularIsLoading(false), 2000)
   };
 
-  return isLoading ? (
+  return popularIsLoading ? (
     <Loader />
   ) : (
       <div className="popularWrapper">
