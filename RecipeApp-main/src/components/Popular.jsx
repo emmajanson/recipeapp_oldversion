@@ -4,8 +4,9 @@ import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/splide/dist/css/splide.min.css";
 import {Link} from "react-router-dom";
 import "./Popular.css";
+import Loader from "./Loader";
 
-function Popular() {
+function Popular({ isLoading }) {
   const [popular, setPopular] = useState([]);
 
   useEffect(() => {
@@ -28,7 +29,9 @@ function Popular() {
     }
   };
 
-  return (
+  return isLoading ? (
+    <Loader />
+  ) : (
       <div className="popularWrapper">
         <h3 className="popularTitle">Popular Dishes</h3>
         <Splide 
