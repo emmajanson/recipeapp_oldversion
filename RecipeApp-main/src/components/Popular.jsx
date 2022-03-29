@@ -6,7 +6,7 @@ import {Link} from "react-router-dom";
 import "./Popular.css";
 import Loader from "./Loader";
 
-function Popular({ isLoading }) {
+function Popular({ isLoading, mobileMode, windowLoad }) {
   const [popular, setPopular] = useState([]);
   const [popularIsLoading, setPopularIsLoading] = useState(true);
 
@@ -39,7 +39,7 @@ function Popular({ isLoading }) {
         <h3 className="popularTitle">Popular Dishes</h3>
         <Splide 
           options={{
-            perPage: 5,
+            perPage: mobileMode || windowLoad ? 2 : 5,
             arrows: true,
             pagination: false,
             drag: "free",

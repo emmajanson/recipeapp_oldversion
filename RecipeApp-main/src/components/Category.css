@@ -1,6 +1,7 @@
 .categorybar {
   display: flex;
   margin: 10px 45px;
+  flex-wrap: wrap;
 }
 
 .link {

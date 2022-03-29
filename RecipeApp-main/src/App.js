@@ -44,7 +44,7 @@ function App() {
         <Header />
         <Category />
         <Search />
-        <Pages mobileMode={mobileMode} windowLoad={windowLoad}  />
+        <Pages mobileMode={mobileMode} windowLoad={windowLoad} />
       </BrowserRouter>
     </div>
   );
