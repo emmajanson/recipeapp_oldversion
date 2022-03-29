@@ -29,8 +29,10 @@ function App() {
    })
 
    useEffect(() => {
-  console.log(mobileMode);
-   }, [mobileMode])
+    console.log(mobileMode, windowLoad);
+
+   }, [mobileMode, windowLoad])
+
 
 // MOBILE MODE END
  
