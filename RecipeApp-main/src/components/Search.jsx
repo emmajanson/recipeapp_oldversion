@@ -16,15 +16,18 @@ function Search() {
   return (
    <div className="searchformWrapper">
     <form className="searchform" onSubmit={submitHandler}>
-        <div>
-          <FaSearch className="searchicon"></FaSearch>
           <input 
             onChange={(e) => setInput(e.target.value)} 
             type="text" 
             value={input}
             placeholder="Search..."
           />
-        </div>
+          <FaSearch 
+          className="searchicon" 
+          onClick={() => {
+              navigate('/searched/' + input);
+            }}>
+          </FaSearch>
     </form>
    </div>
   );
