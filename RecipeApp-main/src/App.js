@@ -23,6 +23,7 @@ function App() {
 
     if (window.innerWidth < 500) {
       setMobileMode(true)
+      setWindowLoad(true)
     } else if (window.innerWidth > 500) {
       setMobileMode(false)
     }

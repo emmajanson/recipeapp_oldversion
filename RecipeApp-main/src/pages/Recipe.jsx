@@ -36,18 +36,20 @@ function Recipe() {
 
     <div className="detailsWrapper">
       <div className="info">
-        <button
-          className={activeTab === "ingredients" ? "active" : ""} 
-          onClick={() => setActiveTab("ingredients")}
-        >
-         Ingredients
-        </button>
-        <button
-          className={activeTab === "instructions" ? "active" : ""} 
-          onClick={() => setActiveTab("instructions")}
-        >
-          Instructions
-        </button>
+        <div className="btn-wrapper">
+          <button
+            className={activeTab === "ingredients" ? "active" : ""} 
+            onClick={() => setActiveTab("ingredients")}
+          >
+            Ingredients
+          </button>
+          <button
+            className={activeTab === "instructions" ? "active" : ""} 
+            onClick={() => setActiveTab("instructions")}
+          >
+            Instructions
+          </button>
+        </div>
         {activeTab === "ingredients" && (
           <ul className="ingredients"> 
             {details.extendedIngredients.map((ingredient) => (

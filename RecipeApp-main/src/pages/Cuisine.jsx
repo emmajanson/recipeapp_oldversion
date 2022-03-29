@@ -22,7 +22,7 @@ function Cuisine() {
     },[params.type]);
 
   return (
-    <div className='cuisineWrapper'>
+    <div className='cuisineWrapper searchedGrid'>
       <Grid 
         animate={{ opacity: 1 }}
         initial={{ opacity: 0 }}
@@ -31,7 +31,7 @@ function Cuisine() {
       >
           {cuisine.map((item) => {
               return (
-                  <div className='cuisineCard' key={item.id}>
+                  <div className='cuisineCard searchedCard' key={item.id}>
                     <Link className='cuisineLink' to={'/recipe/' + item.id}>
                       <img className='cuisineImage' src={item.image} alt="" />
                       <h4 className='cuisineItemTitle'>{item.title}</h4>
@@ -45,9 +45,9 @@ function Cuisine() {
 }
 
 const Grid = styled(motion.div)`
-  display: grid; 
-  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
-  grid-gap: 2rem;
+display: flex;
+flex-wrap: wrap;
+justify-content: space-evenly;
 `;
 
 export default Cuisine;
