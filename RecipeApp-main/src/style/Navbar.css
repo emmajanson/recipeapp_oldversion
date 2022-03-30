@@ -18,3 +18,18 @@
   width: 260px;
   padding-top: 25px;
 }
+
+.navbar_links {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.home {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: white;
+  font-size: 16px;
+  padding: 0px 65px;
+  margin-top: -25px;
+}
