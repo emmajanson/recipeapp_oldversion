@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom";
-import './Category.css';
+import '../style/Category.css';
 
 
 function Category() {

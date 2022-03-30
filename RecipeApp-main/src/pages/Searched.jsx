@@ -2,9 +2,9 @@ import React from 'react';
 import {useEffect, useState} from "react";
 import {useParams} from "react-router-dom";
 import {Link} from "react-router-dom";
-import './Searched.css';
+import '../style/Searched.css';
 import Loader from '../components/Loader';
-import NoResultPage from '../components/NoResultPage';
+import NoResultPage from './NoResultPage';
 
 function Searched() {
     const [searchedRecipes, setSearchedRecipes] = useState([]);

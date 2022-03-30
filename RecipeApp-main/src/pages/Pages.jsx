@@ -3,10 +3,10 @@ import Home from "./Home";
 import Cuisine from "./Cuisine";
 import Searched from "./Searched";
 import Recipe from './Recipe';
-import NoResultPage from "../components/NoResultPage";
+import NoResultPage from "./NoResultPage";
 import { Route, Routes, useLocation } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
-import NotFound from "../components/NotFound";
+import NotFound from "./PageNotFound";
 
 function Pages({ isLoading, mobileMode, windowLoad }) {
   const location = useLocation();

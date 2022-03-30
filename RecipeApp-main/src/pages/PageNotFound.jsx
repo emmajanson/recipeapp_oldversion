@@ -1,6 +1,6 @@
 import React from 'react';
-import './NotFound.css'
-import sadburger from './sadburger.jpg';
+import '../style/PageNotFound.css'
+import sadburger from '../media/sadburger.jpg';
 
 
 function NotFound () {
