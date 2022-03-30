@@ -10,6 +10,7 @@ function Searched() {
     const [searchedRecipes, setSearchedRecipes] = useState([]);
     const [searchIsLoading, setSearchIsLoading] = useState(true);
 
+
     let params = useParams();
 
     const getSearched = async (name) => {
