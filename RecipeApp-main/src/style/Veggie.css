@@ -4,6 +4,11 @@
   margin-bottom: 5%;
 }
 
+.veggieTitle {
+  margin-bottom: 2%;
+  font-size: 20px;
+}
+
 .veggieCard {
   min-height: 15rem;
   border-radius: 1rem;

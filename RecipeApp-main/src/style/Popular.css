@@ -4,6 +4,11 @@
   margin-bottom: 5%;
 }
 
+.popularTitle {
+  margin-bottom: 2%;
+  font-size: 20px;
+}
+
 .popularCard {
   min-height: 200px;
   border-radius: 20px;
@@ -21,7 +26,7 @@
   width: 100%;
   text-align: center;
   font-weight: 600;
-  font-size: 1rem;
+  font-size: 14px;
   height: 40%;
   display: flex;
   justify-content: center;
