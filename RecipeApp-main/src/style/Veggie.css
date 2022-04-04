@@ -1,17 +1,22 @@
-.popularWrapper {
+.veggieWrapper {
   margin-left: 5%;
   margin-right: 5%;
   margin-bottom: 5%;
 }
 
-.popularCard {
-  min-height: 200px;
-  border-radius: 20px;
-  overflow: hidden;
-  position: relative;  
+.veggieTitle {
+  margin-bottom: 2%;
+  font-size: 20px;
 }
 
-.popularRecipeTitle {
+.veggieCard {
+  min-height: 15rem;
+  border-radius: 1rem;
+  overflow: hidden;
+  position: relative;
+}
+
+.veggieRecipeTitle {
   position: absolute;
   z-index: 10;
   left: 50%;
@@ -28,8 +33,10 @@
   align-items: center;
 }
 
-.popularRecipeImage {
+.veggieRecipeImage {
+  border-radius: 1rem;
   position: absolute;
+  left: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;

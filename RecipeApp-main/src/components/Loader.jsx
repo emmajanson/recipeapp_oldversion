@@ -1,7 +1,7 @@
 import React from 'react';
 import Lottie from 'react-lottie';
-import * as loading from './Loading.json';
-import './Loader.css'
+import * as loading from '../media/Loading.json';
+import '../style/Loader.css'
 
 const defaultOptions = {
     loop: true,

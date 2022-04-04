@@ -2,7 +2,7 @@ import Pages from "./pages/Pages";
 import react, { useState, useEffect } from "react";
 import Category from "./components/Category";
 import Search from "./components/Search";
-import Header from "./components/Header";
+import Navbar from "./components/Navbar";
 import { BrowserRouter } from "react-router-dom";
 
 function App() {
@@ -42,7 +42,7 @@ function App() {
   return (
     <div className="App">
       <BrowserRouter>
-        <Header />
+        <Navbar />
         <Category />
         <Search />
         

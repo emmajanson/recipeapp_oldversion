@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'  
-import './NoResultPage.css';
+import '../style/NoResultPage.css';
 
 
 function NoResultPage() {
