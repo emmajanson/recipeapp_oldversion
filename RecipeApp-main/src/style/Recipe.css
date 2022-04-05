@@ -3,6 +3,7 @@
   margin-left: 5%;
   margin-right: 5%;
   margin-top: 5%;
+  text-align: center;
 }
 
 
@@ -74,7 +75,7 @@ max-width: 60rem;
 
 
 
-@media screen and (max-width: 500px){
+@media screen and (max-width: 900px){
 
   .btn-wrapper{
     display: flex;
@@ -94,4 +95,9 @@ max-width: 60rem;
   }
   
 
+}
+
+
+.favorite-heart-false{
+  font-size: 45px;
 }

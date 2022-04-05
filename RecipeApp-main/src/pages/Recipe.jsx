@@ -2,8 +2,9 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import React from "react";
 import '../style/Recipe.css';
+import { RiHeartLine } from "react-icons/ri";
 
-function Recipe() {
+function Recipe({favorites, setFavorites}) {
 
   let params = useParams();
   const [details, setDetails] = useState({});
@@ -21,6 +22,28 @@ function Recipe() {
     fetchDetails();
   }, [params.name]);
 
+
+  // ADDING FAVORITES START 
+  const saveToLocalStorage = (items) => {
+    localStorage.setItem('food-favorites', JSON.stringify(items))
+  }
+
+  const HandleHeartClick = (details) => {
+
+    console.log(details);
+
+    const newFavorites = [...favorites, details]
+    setFavorites(newFavorites)
+    saveToLocalStorage(newFavorites)
+  }
+
+  useEffect(() => {
+  console.log(favorites)
+  }, [favorites])
+
+  // ADDING FAVORITES START 
+
+
   return (
    <div>
 
@@ -31,6 +54,14 @@ function Recipe() {
       <div className="titleAndSummary">
         <h1 className="title">{details.title}</h1>
         <p className="summary" dangerouslySetInnerHTML={{__html: details.summary}}></p>
+        
+        
+        <RiHeartLine onClick={() => HandleHeartClick(details)} className="favorite-heart-false" />
+        
+        
+         
+        
+
       </div>
     </div>
 
