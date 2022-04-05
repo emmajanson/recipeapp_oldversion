@@ -20,6 +20,7 @@ function Cuisine() {
         getCuisine(params.type)
     },[params.type]);
 
+
   return (
     <div className='cuisineWrapper searchedGrid'>
       <Grid 

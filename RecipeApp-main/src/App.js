@@ -36,7 +36,6 @@ function App() {
 
 
 // MOBILE MODE END
- 
 
 
   return (
