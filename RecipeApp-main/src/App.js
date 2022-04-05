@@ -29,12 +29,6 @@ function App() {
     }
    })
 
-   useEffect(() => {
-    
-
-   }, [mobileMode, windowLoad])
-
-
 // MOBILE MODE END
 
 
