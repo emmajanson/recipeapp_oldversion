@@ -1,10 +1,11 @@
 import { useEffect, useState } from "react";
-import styled from "styled-components";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/splide/dist/css/splide.min.css";
 import {Link} from "react-router-dom";
 import "../style/Popular.css";
 import Loader from "./Loader";
+import { FiClock } from 'react-icons/fi';
+
 
 function Popular({ isLoading, mobileMode, windowLoad }) {
   const [popular, setPopular] = useState([]);
@@ -21,9 +22,10 @@ function Popular({ isLoading, mobileMode, windowLoad }) {
       setPopular(JSON.parse(check));
     }else{
       const api = await fetch(
-        `https://api.spoonacular.com/recipes/random?apiKey=${process.env.REACT_APP_API_KEY}&number=9`
+        `https://api.spoonacular.com/recipes/random?apiKey=${process.env.REACT_APP_API_KEY}`
         );
         const data = await api.json();
+
 
         localStorage.setItem("popular", JSON.stringify(data.recipes));
         setPopular(data.recipes);
@@ -39,7 +41,7 @@ function Popular({ isLoading, mobileMode, windowLoad }) {
         <h3 className="popularTitle">Popular Dishes</h3>
         <Splide 
           options={{
-            perPage: mobileMode || windowLoad ? 2 : 5,
+            perPage: mobileMode || windowLoad ? 2 : 4,
             arrows: true,
             pagination: false,
             drag: "free",
@@ -51,10 +53,14 @@ function Popular({ isLoading, mobileMode, windowLoad }) {
               <SplideSlide key={recipe.id}>
                 <div className="popularCard">
                   <Link to={'/recipe/' + recipe.id}>
-                    <p className="popularRecipeTitle">{recipe.title}</p>
                     <img className="popularRecipeImage" src={recipe.image} alt={recipe.title} />
-                    <Gradient />
-                  </Link>
+                    <h1 className="popularRecipeTitle">{recipe.title.length < 20 ? `${recipe.title}` : 
+                    `${recipe.title.substring(0, 25)}...` }</h1>
+                    <div className="popularRecipeTimeWrapper">
+                      <FiClock />
+                      <p className="popularRecipeTime">{recipe.readyInMinutes + " min"}</p>
+                    </div>
+                  </Link>    
                 </div>
               </SplideSlide>
             );
@@ -63,14 +69,5 @@ function Popular({ isLoading, mobileMode, windowLoad }) {
       </div>
   );
 }
-
-
-const Gradient = styled.div`
-  z-index: 3;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.6));
-`;
 
 export default Popular;

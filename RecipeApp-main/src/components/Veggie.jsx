@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
-import styled from "styled-components";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/splide/dist/css/splide.min.css";
 import {Link} from "react-router-dom";
 import '../style/Veggie.css';
 import Loader from "./Loader";
+import { FiClock } from 'react-icons/fi';
 
 function Veggie({ mobileMode, windowLoad }) {
 
@@ -54,9 +54,13 @@ function Veggie({ mobileMode, windowLoad }) {
               <SplideSlide key={recipe.id}>
                 <div className="veggieCard">
                   <Link to={'/recipe/' + recipe.id}>
-                    <p className="veggieRecipeTitle">{recipe.title}</p>
                     <img className="veggieRecipeImage" src={recipe.image} alt={recipe.title} />
-                    <Gradient />
+                    <h1 className="veggieRecipeTitle">{recipe.title.length < 20 ? `${recipe.title}` : 
+                    `${recipe.title.substring(0, 25)}...` }</h1>
+                    <div className="veggieRecipeTimeWrapper">
+                      <FiClock />
+                      <p className="veggieRecipeTime">{recipe.readyInMinutes + " min"}</p>
+                    </div>
                   </Link>
                 </div>
               </SplideSlide>
@@ -67,14 +71,5 @@ function Veggie({ mobileMode, windowLoad }) {
     </div>
   );
 }
-
-
-const Gradient = styled.div`
-  z-index: 3;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.6));
-`;
 
 export default Veggie;

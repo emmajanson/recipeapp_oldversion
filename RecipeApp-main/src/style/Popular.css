@@ -1,41 +1,58 @@
 .popularWrapper {
-  margin-left: 5%;
-  margin-right: 5%;
-  margin-bottom: 5%;
+  margin-left: 3%;
+  margin-right: 3%;
+  margin-bottom: 3%;
 }
 
 .popularTitle {
-  margin-bottom: 2%;
-  font-size: 20px;
+  font-family: 'Playfair Display', serif;
+  font-weight: 600;
+  margin-bottom: 1%;
+  font-size: 24px;
+  letter-spacing: 0.5px;
 }
 
 .popularCard {
-  min-height: 200px;
-  border-radius: 20px;
-  overflow: hidden;
+  min-height: 300px;
   position: relative;  
 }
 
 .popularRecipeTitle {
+  font-family: 'Playfair Display', serif;
   position: absolute;
-  z-index: 10;
   left: 50%;
-  bottom: 0%;
+  top: 81%;
   transform: translate(-50%, 0%);
-  color: white;
+  color: black;
   width: 100%;
-  text-align: center;
   font-weight: 600;
-  font-size: 14px;
-  height: 40%;
+  font-size: 18px;
+  letter-spacing: 0.5px;
   display: flex;
-  justify-content: center;
+  margin-left: 5px;
+}
+
+.popularRecipeTimeWrapper {
+  display: flex;
   align-items: center;
+  top: 88%;
+  position: absolute;
+  margin-left: 5px;
+}
+
+.popularRecipeTime {
+  font-family: 'Playfair Display', serif;
+  color: black;
+  font-weight: 400;
+  font-size: 16px;
+  margin-left: 5px;
+  margin-bottom: 7px;
 }
 
 .popularRecipeImage {
   position: absolute;
   width: 100%;
-  height: 100%;
+  height: 80%;
   object-fit: cover;
+  display: flex;
 }

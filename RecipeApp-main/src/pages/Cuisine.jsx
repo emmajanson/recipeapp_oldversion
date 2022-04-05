@@ -10,7 +10,7 @@ function Cuisine() {
 
     const getCuisine = async (name) => {
         const data = await fetch(
-          `https://api.spoonacular.com/recipes/complexSearch?apiKey=${process.env.REACT_APP_API_KEY}&cuisine=${name}`
+          `https://api.spoonacular.com/recipes/complexSearch?apiKey=${process.env.REACT_APP_API_KEY}&cuisine=${name}&number=23`
         );
         const recipes = await data.json();
         setCuisine(recipes.results);
@@ -18,7 +18,6 @@ function Cuisine() {
 
     useEffect(() => {
         getCuisine(params.type)
-        console.log(params.type);
     },[params.type]);
 
   return (

@@ -45,7 +45,6 @@ function App() {
         <Navbar />
         <Category />
         <Search />
-        
         <Pages mobileMode={mobileMode} windowLoad={windowLoad} />
       </BrowserRouter>
     </div>
