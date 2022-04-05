@@ -13,31 +13,35 @@
 }
 
 .popularCard {
-  min-height: 300px;
+  min-height: 350px;
   position: relative;  
+}
+
+.popularRecipeTextWrapper {
+  position: absolute;
+  top: 81%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  width: 100%;
 }
 
 .popularRecipeTitle {
   font-family: 'Playfair Display', serif;
-  position: absolute;
-  left: 50%;
-  top: 81%;
-  transform: translate(-50%, 0%);
   color: black;
-  width: 100%;
   font-weight: 600;
   font-size: 18px;
   letter-spacing: 0.5px;
-  display: flex;
-  margin-left: 5px;
+  margin-bottom: 5px;
 }
 
-.popularRecipeTimeWrapper {
+.popularTimeWrapper {
   display: flex;
   align-items: center;
-  top: 88%;
-  position: absolute;
-  margin-left: 5px;
+}
+
+.timeIcon {
+  margin-right: 5px;
+  margin-top: 3px;
 }
 
 .popularRecipeTime {
@@ -45,8 +49,6 @@
   color: black;
   font-weight: 400;
   font-size: 16px;
-  margin-left: 5px;
-  margin-bottom: 7px;
 }
 
 .popularRecipeImage {
@@ -55,4 +57,16 @@
   height: 80%;
   object-fit: cover;
   display: flex;
+}
+
+@media screen and (max-width: 500px){
+  .popularRecipeImage {
+    height: 70%;
+  }
+}
+
+@media screen and (max-width: 500px){
+  .popularRecipeTextWrapper {
+    top: 71%;
+  }
 }

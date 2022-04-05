@@ -23,7 +23,7 @@ function Veggie({ mobileMode, windowLoad }) {
       setVeggie(JSON.parse(check));
     }else{
       const api = await fetch(
-        `https://api.spoonacular.com/recipes/random?apiKey=${process.env.REACT_APP_API_KEY}&number=9&tags=vegetarian`
+        `https://api.spoonacular.com/recipes/random?apiKey=${process.env.REACT_APP_API_KEY}&number=12&tags=vegetarian`
         );
         const data = await api.json();
 
@@ -55,11 +55,13 @@ function Veggie({ mobileMode, windowLoad }) {
                 <div className="veggieCard">
                   <Link to={'/recipe/' + recipe.id}>
                     <img className="veggieRecipeImage" src={recipe.image} alt={recipe.title} />
-                    <h1 className="veggieRecipeTitle">{recipe.title.length < 20 ? `${recipe.title}` : 
-                    `${recipe.title.substring(0, 25)}...` }</h1>
-                    <div className="veggieRecipeTimeWrapper">
-                      <FiClock />
-                      <p className="veggieRecipeTime">{recipe.readyInMinutes + " min"}</p>
+                    <div className="veggieRecipeTextWrapper">
+                      <h1 className="veggieRecipeTitle">{recipe.title.length < 20 ? `${recipe.title}` : 
+                      `${recipe.title.substring(0, 25)}...` }</h1>
+                      <div className="veggieTimeWrapper">
+                        <FiClock className="timeIcon"/>
+                        <p className="veggieRecipeTime">{recipe.readyInMinutes + " min"}</p>
+                      </div>
                     </div>
                   </Link>
                 </div>

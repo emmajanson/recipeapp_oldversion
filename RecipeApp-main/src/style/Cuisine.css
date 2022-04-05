@@ -1,23 +1,33 @@
 .cuisineWrapper {
-  margin: 5%;
+  margin-left: 3%;
+  margin-right: 3%;
+  margin-bottom: 3%;
+  margin-top: 3%;
 }
 
 .cuisineGrid {
   display: grid; 
   grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
-  grid-gap: 2rem;
 }
 
 .cuisineImage {
   width: 100%;
-  border-radius: 1rem;
 }
 
 .cuisineItemTitle {
-  text-align: center;
-  padding: 1rem;
+  font-family: 'Playfair Display', serif;
+  color: black;
+  font-weight: 600;
+  font-size: 18px;
+  letter-spacing: 0.5px;
 }
 
 .cuisineLink {
   text-decoration: none;
+}
+
+.cuisineCard {
+  width: 40vw;
+  max-width: 15rem;
+  margin-bottom: 25px;
 }

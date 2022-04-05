@@ -6,8 +6,8 @@ import "../style/Popular.css";
 import Loader from "./Loader";
 import { FiClock } from 'react-icons/fi';
 
+function Popular({ mobileMode, windowLoad }) {
 
-function Popular({ isLoading, mobileMode, windowLoad }) {
   const [popular, setPopular] = useState([]);
   const [popularIsLoading, setPopularIsLoading] = useState(true);
 
@@ -16,13 +16,14 @@ function Popular({ isLoading, mobileMode, windowLoad }) {
   }, []);
 
   const getPopular = async () => {
+
     const check = localStorage.getItem("popular");
 
     if(check){
       setPopular(JSON.parse(check));
     }else{
       const api = await fetch(
-        `https://api.spoonacular.com/recipes/random?apiKey=${process.env.REACT_APP_API_KEY}`
+        `https://api.spoonacular.com/recipes/random?apiKey=${process.env.REACT_APP_API_KEY}&number=12`
         );
         const data = await api.json();
 
@@ -54,11 +55,13 @@ function Popular({ isLoading, mobileMode, windowLoad }) {
                 <div className="popularCard">
                   <Link to={'/recipe/' + recipe.id}>
                     <img className="popularRecipeImage" src={recipe.image} alt={recipe.title} />
-                    <h1 className="popularRecipeTitle">{recipe.title.length < 20 ? `${recipe.title}` : 
-                    `${recipe.title.substring(0, 25)}...` }</h1>
-                    <div className="popularRecipeTimeWrapper">
-                      <FiClock />
-                      <p className="popularRecipeTime">{recipe.readyInMinutes + " min"}</p>
+                    <div className="popularRecipeTextWrapper">
+                      <h1 className="popularRecipeTitle">{recipe.title.length < 20 ? `${recipe.title}` : 
+                      `${recipe.title.substring(0, 25)}...` }</h1>
+                      <div className="popularTimeWrapper">
+                        <FiClock className="timeIcon"/>
+                        <p className="popularRecipeTime">{recipe.readyInMinutes + " min"}</p>
+                      </div>
                     </div>
                   </Link>    
                 </div>

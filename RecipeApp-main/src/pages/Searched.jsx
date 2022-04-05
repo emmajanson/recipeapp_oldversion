@@ -43,7 +43,8 @@ function Searched() {
               <div className='searchedCard' key={item.id}>
                 <Link className='searchedLink' to={'/recipe/' + item.id}>
                   <img className='searchedImage' src={item.image} alt="" />
-                  <h4 className='searchedItemTitle'>{item.title}</h4>
+                  <h1 className="searchedItemTitle">{item.title.length < 20 ? `${item.title}` : 
+                    `${item.title.substring(0, 25)}...` }</h1>
                 </Link>
               </div>
           );

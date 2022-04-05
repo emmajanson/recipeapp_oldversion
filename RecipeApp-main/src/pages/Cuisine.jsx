@@ -31,10 +31,11 @@ function Cuisine() {
       >
           {cuisine.map((item) => {
               return (
-                  <div className='cuisineCard searchedCard' key={item.id}>
+                  <div className='cuisineCard' key={item.id}>
                     <Link className='cuisineLink' to={'/recipe/' + item.id}>
                       <img className='cuisineImage' src={item.image} alt="" />
-                      <h4 className='cuisineItemTitle'>{item.title}</h4>
+                      <h1 className="cuisineItemTitle">{item.title.length < 20 ? `${item.title}` : 
+                      `${item.title.substring(0, 25)}...` }</h1>
                     </Link>
                   </div>
               );

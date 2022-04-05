@@ -17,27 +17,31 @@
   position: relative;
 }
 
+.veggieRecipeTextWrapper {
+  position: absolute;
+  top: 81%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  width: 100%;
+}
+
 .veggieRecipeTitle {
   font-family: 'Playfair Display', serif;
-  position: absolute;
-  left: 50%;
-  top: 81%;
-  transform: translate(-50%, 0%);
   color: black;
-  width: 100%;
   font-weight: 600;
   font-size: 18px;
   letter-spacing: 0.5px;
-  display: flex;
-  margin-left: 5px;
+  margin-bottom: 5px;
 }
 
-.veggieRecipeTimeWrapper {
+.veggieTimeWrapper {
   display: flex;
   align-items: center;
-  top: 88%;
-  position: absolute;
-  margin-left: 5px;
+}
+
+.timeIcon {
+  margin-right: 5px;
+  margin-top: 3px;
 }
 
 .veggieRecipeTime {
@@ -45,8 +49,6 @@
   color: black;
   font-weight: 400;
   font-size: 16px;
-  margin-left: 5px;
-  margin-bottom: 7px;
 }
 
 .veggieRecipeImage {
@@ -55,4 +57,16 @@
   height: 80%;
   object-fit: cover;
   display: flex;
+}
+
+@media screen and (max-width: 500px){
+  .veggieRecipeImage {
+    height: 70%;
+  }
+}
+
+@media screen and (max-width: 500px){
+  .veggieRecipeTextWrapper {
+    top: 71%;
+  }
 }
