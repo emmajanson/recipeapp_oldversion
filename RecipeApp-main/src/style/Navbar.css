@@ -30,11 +30,15 @@
   text-transform: uppercase;
   color: white;
   font-size: 16px;
-  padding: 0px 65px;
+  padding-right: 30px;
   margin-top: -25px;
 }
 
-.hamburger-div{
-  position: absolute;
-  
+.favorites {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: white;
+  font-size: 16px;
+  padding-right: 65px;
+  margin-top: -25px;
 }

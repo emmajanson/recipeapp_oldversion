@@ -62,6 +62,7 @@
 @media screen and (max-width: 500px){
   .veggieRecipeImage {
     height: 70%;
+    width: 90%;
   }
 }
 
